@@ -1,0 +1,19 @@
+appId: com.lironnick.maestro
+env:
+  EMAIL: 'lironnick@gmail.com'
+  PASSWORD: '123'
+---
+- openLink: exp://10.0.0.143:8081
+- tapOn:
+    id: input-email
+- inputText: ${EMAIL}
+
+- tapOn:
+    id: input-password
+- inputText: ${PASSWORD}
+- hideKeyboard
+
+- tapOn:
+    id: button-entrar
+
+- assertVisible: 'Acesso Liberado!'
